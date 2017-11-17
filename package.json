@@ -1,0 +1,25 @@
+{
+  "name": "mind-reader",
+  "version": "1.0.0",
+  "description": "gift finder app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmacdonald1/mind-reader.git"
+  },
+  "keywords": [
+    "gift"
+  ],
+  "author": "Melanie Fitsum Heidy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmacdonald1/mind-reader/issues"
+  },
+  "homepage": "https://github.com/mmacdonald1/mind-reader#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
