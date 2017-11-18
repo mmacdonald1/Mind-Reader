@@ -19,6 +19,12 @@ Project Colors:
             med: #b0dbd2
             med-light: #cae4df
             light: #dfeceb
+    med blue: #28818d
+         4 lighter shades:
+            grey-tone: #4d98a2
+            med: #79b0b9
+            med-light: #c3dcde
+            light: #ccdfe2
      dark blue: #0f394c
         4 lighter shades:
             grey-tone: #3e6170
@@ -29,16 +35,140 @@ Project Colors:
     white: #eeeeee
     Dark Grey: #222222;
 
+text:
+font-family: 'Montserrat', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Merriweather Sans', sans-serif;
+
    ========================================================================== */
 
 /*===== Universal Styles ======================*/
 
-/*===== Nav Bar ===============================*/
+body, html{
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color:#eeeeee;
+    color:#222222;
+    font-size:60px;
+}
+p{
+    font-size:1em;
+    
+}
+h1, h2, h3, h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:600;
+}
+h1{
+   font-size:1.4em; 
+}
+h2{
+    font-size:1em;
+}
+.btn{
+    background-color: #82c6b4;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 2.5;
+    text-align: center;
+    box-shadow: 2px 2px 0px #DADADA;
+    height: 2.5em;
+    width: 100%;
+    display: block;
+    border:none;
+}
+    .btn:hover{
+        background-color: #9bd0c3;
+        color: #fff;
+    }
 
+input.btn{
+    background-color: #f2a937;
+    color: #fff;
+}
+    input.btn:hover{
+        background-color: #f5c87e;
+        color: #fff;
+    }
+
+/*===== HOME ===============================*/
+.body{
+  background: #0f394c;
+}
 .navbar{
     background: #0f394c;
     margin:0;
 }
+#mind-reader-logo{
+    width:100%;
+    
+    text-align: center;
+}
+#title-area{
+    padding: 50px 50px 30px 30px;
+    margin:0;
+}
+div.container.form{
+    width:100%;
+    background: #4d98a2;
+    color: #eeeeee;
+}
+.form-group{
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+.form-control{
+    width:80%;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+.featured{
+    display: none;
+}
+
+.footer{
+    height: 200px;
+    background: #0f394c;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== 
+
+@media only screen and (min-width: 768px) {
+#mind-reader-logo{
+    width:60%;
+    float:left;
+}
+}
+
+@media only screen and (min-width: 940px){
+/*
 .navbar-brand{
     padding: 0px 15px 0px 15px;
 }
@@ -53,17 +183,20 @@ Project Colors:
 .container{
     width:70%;
 }
+/*
 div.container.form{
     margin-left: 15%;
     margin-right: 15%;
-    background: #4d98a2;
-    color: #eeeeee;
     padding-bottom: 15px;
 }
+*/
 
+/*
 .jumbotron.jumbotron-fluid{
     background-image:url(../img/gift.jpg);
     background-size:cover;
     height: 600px;
 }
-
+*/
+    
+}
