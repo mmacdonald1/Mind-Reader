@@ -1,0 +1,69 @@
+/* ==========================================================================
+Project Colors:
+
+    yellow: #f2a937
+        4 lighter shades:
+            grey-tone:#f4b956
+            med: #f5c87e
+            med-light: #f4d5a3
+            light: #f5e7cc
+     red: #e53c38
+        4 lighter shades:
+            grey-tone: #ea625d
+            med: #ec8882
+            med-light: #f0abab
+            light: #f5d1d2
+    light blue: #82c6b4
+        4 lighter shades:
+            grey-tone: #9bd0c3
+            med: #b0dbd2
+            med-light: #cae4df
+            light: #dfeceb
+     dark blue: #0f394c
+        4 lighter shades:
+            grey-tone: #3e6170
+            med: #6c8592
+            med-light: #9baab5
+            light: #c9cfd6
+
+    white: #eeeeee
+    Dark Grey: #222222;
+
+   ========================================================================== */
+
+/*===== Universal Styles ======================*/
+
+/*===== Nav Bar ===============================*/
+
+.navbar{
+    background: #0f394c;
+    margin:0;
+}
+.navbar-brand{
+    padding: 0px 15px 0px 15px;
+}
+.navbar.navbar-light.bg-light{
+    padding: 10px;
+}
+
+#mind-reader-logo{
+    width:40%;
+}
+
+.container{
+    width:70%;
+}
+div.container.form{
+    margin-left: 15%;
+    margin-right: 15%;
+    background: #4d98a2;
+    color: #eeeeee;
+    padding-bottom: 15px;
+}
+
+.jumbotron.jumbotron-fluid{
+    background-image:url(../img/gift.jpg);
+    background-size:cover;
+    height: 600px;
+}
+

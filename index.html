@@ -3,8 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Mind Reader</title>
+    
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <!-- Added a link to CSS-->
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Added a link to Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,600,700" rel="stylesheet">
+    
 </head>
 <body>
+ <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img id="mind-reader-logo" src="./assets/img/mind-reader-logo.png"  alt="Mind Reader">
+  </a>
+</nav>
+ <div class="main">
+    <!-- row 2 with 2 columns -->
+     <div class="row">
+         <!-- column 1 of 2 -->
+        <div class="col-lg-12">
+<!--            <img src="assets/img/gift.jpg" width="100%">-->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container form">
+                   <h1 id="title-area">Contact</h1>
+                            <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">Name</label>
+                                <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="John Smith">
+                              </div>
+                                
+                              <div class="form-group">
+                                <label for="exampleFormControlInput1">Email</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="exampleFormControlSelect2">Message</label>
+                                  <textarea type="message" class="form-control" id="exampleFormControlInput3" placeholder="Your message here."></textarea>
+                                  </div>
+                                <button type="submit" class="btn">Submit</button>
+                            </form>   
+                            
+                </div>
+            </div>
+        </div>
+      </div>
+ </div>
+
     
+<div class= "row">
+    <div class = "col-lg-12">
+    <h1>Featured</h1>
+    </div>
+</div>
+<div class="row images" id="giphy-view">
+    <div id="images-1" class="col-md-4">
+    </div>
+    <div id="images-2" class="col-md-4">
+    </div>
+    <div id="images-3" class="col-md-4">
+    </div>
+</div>
+    
+</div>
+        
+        <!-- As a heading -->
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1"></span>
+</nav>
+    
+
 </body>
+
+<!-- Added a link to Javascript files-->
+<script src="assets/js/mind-reader.js"></script>
+
 </html>
