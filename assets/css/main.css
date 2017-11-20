@@ -165,7 +165,7 @@ div.container.form{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
 
 body,html{
         font-size: 30px;
@@ -203,7 +203,7 @@ body,html{
     }
 }
 
-@media only screen and (min-width: 940px){
+@media (min-width: 940px){
     html,body{
         font-size: 16px;
     }
@@ -211,7 +211,7 @@ body,html{
 #mind-reader-logo{
     width:20%;
 }
-.jumbotron.jumbotron-fluid.clearfix{
+.jumbotron.clearfix{
     background-image: url(../img/gifts.jpg);
     background-size:contain;
 }
