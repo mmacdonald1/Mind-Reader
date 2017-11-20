@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/mmacdonald1/mind-reader#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
   }
 }
