@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Mind Reader</title>
-    
+
     <!-- Added a link to CSS-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    
+
     <!-- Added a link to Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400,900|Montserrat:400,600,700" rel="stylesheet">
-    
+
 </head>
 <body>
 <nav class="navbar clearfix">
@@ -18,10 +18,78 @@
     <img id="mind-reader-logo" src="./assets/img/mind-reader-logo.png"  alt="Mind Reader">
   </a>
 </nav>
+*****====================================================================================*********
+<p>
+    <input name="query" id="query" placeholder="Enter your search Query">
+    <button id="submitbtn"> Search </button>
+</p>
 
-<div class="main">
-    
+<div id="results">
+
 </div>
-    
+*****===================================================================================**********
+<div class="main">
+
+</div>
+
 </body>
+****=================================================================================================================================================*****
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(document).ready(() => {
+    // alert(' Loaded ')
+
+    function searchNow() {
+      if($('#query').val() != '') {
+        const searchTerm = $('#query').val();
+        $('#results').empty();
+        const url = `http://localhost:3000/getproducts?query=${searchTerm}`;
+        $.getJSON(url, (response) => {
+          const searchedFor = response.query
+          const numberOfResults = response.numItems
+          const products = response.items;
+          $('#results').append(`<h3> ${numberOfResults} results found for ${searchedFor} </h3>`);
+          products.forEach((product) => {
+            //console.log(product)
+            let productHTML = '';
+            const productId = product.itemId;
+            const productName = product.name;
+            const productPrice = product.salePrice;
+            const productImage = product.mediumImage;
+            const productRating = product.customerRating || 'not rated';
+
+            productHTML += `
+              <div class="product">
+              <img id='img-${productId}' scr=''>
+              <p> ${productName} </p>
+              <p> Price: <strong> $${productPrice} </strong> </p>
+              <p> Rating: ${productRating} </p>
+              </div>
+            `
+            $('#results').append(productHTML);
+
+            $(`#img-${productId}`).attr("src", productImage);
+            $(`#img-${productId}`).attr("width", '200px');
+            $(`#img-${productId}`).attr("height", '200px');
+
+          });
+        });
+      } else {
+        alert('Please enter a search term')
+      }
+    }
+
+    $('#submitbtn').on('click', (event) => {
+      searchNow();
+    });
+    $('#query').on('keyup', (event) => {
+      const code = event.keyCode || event.which;
+      if(code == 13) {
+        searchNow();
+      }
+    });
+
+  });
+</script>
+*****=================================================================================********
 </html>
