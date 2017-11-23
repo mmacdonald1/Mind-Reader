@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>Mind Reader</title>
 
-    <!-- Added a link to CSS-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+     integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+     <!-- Added a link to CSS-->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
@@ -18,22 +22,42 @@
     <img id="mind-reader-logo" src="./assets/img/mind-reader-logo.png"  alt="Mind Reader">
   </a>
 </nav>
-*****====================================================================================*********
-<p>
-    <input name="query" id="query" placeholder="Enter your search Query">
-    <button id="submitbtn"> Search </button>
-</p>
+<!-- ==================================================================================== -->
+
+
+<div class="row">
+  <div class="col-lg-6 offset-lg-3 mb-5">
+    <div class="input-group">
+      <!-- <span class="input-group-btn"> -->
+        <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">All</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Clothing, Shoes & jewelery</a>
+          <a class="dropdown-item" href="#">Electronics</a>
+          <a class="dropdown-item" href="#">Arts & Crafts</a>
+          <a class="dropdown-item" href="#">Gift Cards</a>
+          <a class="dropdown-item" href="#">Toys& Games</a>
+          <div role="separator" class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      <!-- </span> -->
+      <input name="query" id="query" type="text" class="form-control" placeholder="Product name" aria-label="Product name">
+      <span class="input-group-btn">
+        <button id="submitbtn" class="btn btn-secondary" type="button">Search</button>
+      </span>
+    </div>
+  </div>
+</div>
 
 <div id="results">
 
 </div>
-*****===================================================================================**********
+<!-- =================================================================================== -->
 <div class="main">
 
 </div>
 
 </body>
-****=================================================================================================================================================*****
+<!-- ================================================================================================================================================= -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(document).ready(() => {
@@ -91,5 +115,5 @@
 
   });
 </script>
-*****=================================================================================********
+<!-- ================================================================================= -->
 </html>
