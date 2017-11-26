@@ -8,8 +8,8 @@
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
 
     <!-- Added a link to CSS-->
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Added a link to Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400,900|Montserrat:400,600,700" rel="stylesheet">
@@ -18,7 +18,7 @@
 <body>
  <nav class="navbar clearfix">
   <a class="navbar-brand" href="#">
-    <img id="mind-reader-logo" src="./assets/img/mind-reader-logo.png"  alt="Mind Reader">
+    <img id="mind-reader-logo" src="img/mind-reader-logo.png"  alt="Mind Reader">
   </a>
 </nav>
  <div class="main">
@@ -30,121 +30,22 @@
             <div class="jumbotron clearfix">
                 <div class="container form">
                    <h1 id="title-area">Find the Gift Thats on Their Mind.</h1>
-   
                     <div class="optionsList">
                        <h2>Choose a few of their favorite things...</h2>
                         <ul>
-                            <form id="options-checkboxes">
-                               <div class="clearfix" id="scroll-area">
-                                    <div id= "row-1" class="checkbox-row">
-
-                                        <div>
-                                          <input type="checkbox" class="options" id="electronics-div" name="electronicsDiv" value="electronics-div">
-                                          <label for="electronics-div">Electronics</label>
-                                        </div>
-                                        <div>
-                                          <input type="checkbox" class="options" id="mensClothing-div" name="mensClothingDiv" value="mensClothing-div">
-                                          <label for="mensClothing-div">Men's Clothing</label>
-                                        </div>
-                                        <div>
-                                          <input type="checkbox" class="options" id="lodging-div" name="lodgingDiv" value="lodging-div">
-                                          <label for="lodging-div">Lodging</label>
-                                        </div>
-                                        <div>
-                                          <input type="checkbox" class="options" id="tolls-div" name="tollsDiv" value="tolls-div">
-                                          <label for="tolls-div">Tolls</label>
-                                        </div>
-                                        <div>
-                                          <input type="checkbox" class="options" id="ent-div" name="entDiv" value="ent-div">
-                                          <label for="ent-div">Entertainment</label>
-                                        </div>
-                                    </div>
-
-
-                                 <div id="row-2" class="checkbox-row">
-
-                                    <div>
-                                      <input type="checkbox" class="options" id="gas-div" name="gasDiv" value="gas-div">
-                                      <label for="gas-div">Gas</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="food-div" name="foodDiv" value="food-div">
-                                      <label for="food-div">Food</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="lodging-div" name="lodgingDiv" value="lodging-div">
-                                      <label for="lodging-div">Lodging</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="tolls-div" name="tollsDiv" value="tolls-div">
-                                      <label for="tolls-div">Tolls</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="ent-div" name="entDiv" value="ent-div">
-                                      <label for="ent-div">Entertainment</label>
-                                    </div>
+                            <div id="options-checkboxes" action="/searchs" method="get">
+                               <div class="clearfix" id="cat-form">
                                 </div>
-                                
-                                 <div id="row-3" class="checkbox-row">
-
-                                    <div>
-                                      <input type="checkbox" class="options" id="gas-div" name="gasDiv" value="gas-div">
-                                      <label for="gas-div">Gas</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="food-div" name="foodDiv" value="food-div">
-                                      <label for="food-div">Food</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="lodging-div" name="lodgingDiv" value="lodging-div">
-                                      <label for="lodging-div">Lodging</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="tolls-div" name="tollsDiv" value="tolls-div">
-                                      <label for="tolls-div">Tolls</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="ent-div" name="entDiv" value="ent-div">
-                                      <label for="ent-div">Entertainment</label>
-                                    </div>
-                                </div>
-                                 <div id="row-4" class="checkbox-row">
-
-                                    <div>
-                                      <input type="checkbox" class="options" id="gas-div" name="gasDiv" value="gas-div">
-                                      <label for="gas-div">Gas</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="food-div" name="foodDiv" value="food-div">
-                                      <label for="food-div">Food</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="lodging-div" name="lodgingDiv" value="lodging-div">
-                                      <label for="lodging-div">Lodging</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="tolls-div" name="tollsDiv" value="tolls-div">
-                                      <label for="tolls-div">Tolls</label>
-                                    </div>
-                                    <div>
-                                      <input type="checkbox" class="options" id="ent-div" name="entDiv" value="ent-div">
-                                      <label for="ent-div">Entertainment</label>
-                                    </div>
-                                </div>
-                                 
-                            </div>
-
-                            <input id="button" type="submit" value="Submit" onsubmit="travelCalc.submit">
-
-                          </form>
+                          </div>
                         </ul>
                         </div>
+                        <button id="submit-btn"> Submit </button>
                 </div>
 
-                <form action="/products" method="post">
+                <!-- <form action="/products" method="post">
                     <input name="query" placeholder="Enter your search Query">
                     <input type="submit" value="Search">
-                </form>
+                </form> -->
             </div>
         </div>
       </div>
@@ -159,34 +60,34 @@
 <div class="row images" id="giphy-view">
     <div id="images-1" class="col-md-4">
         <a class="link-image" href="#">
-        <img class="topic" id="topic-1" src= "assets/img/featured-chef.jpg">
+        <img class="topic" id="topic-1" src= "img/featured-chef.jpg">
         <div class="hover-text">The Budding Chef</div>
         </a>
-        
+
         <a class="link-image" href="#">
-        <img class="topic" id="topic-2" src= "assets/img/featured-coffee.jpg">
+        <img class="topic" id="topic-2" src= "img/featured-coffee.jpg">
         <div class="hover-text">The Coffee Connoiseur</div>
         </a>
     </div>
     <div id="images-2" class="col-md-4">
        <a class="link-image" href="#">
-        <img class="topic" id="topic-3" src ="assets/img/featured-dad.jpg">
+        <img class="topic" id="topic-3" src ="img/featured-dad.jpg">
          <div class="hover-text">The New Parent</div>
         </a>
-        
+
         <a class="link-image" href="#">
-        <img class="topic" id="topic-4" src ="assets/img/featured-fashionista.jpg">
+        <img class="topic" id="topic-4" src ="img/featured-fashionista.jpg">
         <div class="hover-text">The Fashionista</div>
         </a>
     </div>
     <div id="images-3" class="col-md-4">
        <a class="link-image" href="#">
-        <img class="topic" id="topic-5" src ="assets/img/featured-outdoor.jpg">
+        <img class="topic" id="topic-5" src ="img/featured-outdoor.jpg">
         <div class="hover-text">The Adventurer</div>
         </a>
-        
+
         <a class="link-image" href="#">
-        <img class="topic" id="topic-6" src = "assets/img/featured-photo.jpg">
+        <img class="topic" id="topic-6" src = "img/featured-photo.jpg">
         <div class="hover-text">The Photographer</div>
         </a>
     </div>
@@ -202,6 +103,6 @@
 </body>
 
 <!-- Added a link to Javascript files-->
-<script src="assets/js/mind-reader.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+<script src="js/mind-reader.js"></script>
 </html>
