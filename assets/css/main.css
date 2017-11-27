@@ -52,19 +52,19 @@ body, html{
 }
 p{
     font-size:1em;
-    
+
 }
 h1, h2, h3, h4{
     font-family: 'Montserrat', sans-serif;
     font-weight:600;
 }
 h1{
-   font-size:1.4em; 
+   font-size:1.4em;
 }
 h2{
     font-size:1em;
 }
-#button{
+#submit-btn{
     background-color: #82c6b4;
     color: #fff;
     font-weight: 700;
@@ -76,7 +76,7 @@ h2{
     display: block;
     border:none;
 }
-    #button:hover{
+    #submit-btn:hover{
         background-color: #9bd0c3;
         color: #fff;
     }
@@ -100,7 +100,7 @@ input.btn{
 }
 #mind-reader-logo{
     width:100%;
-    
+
     text-align: center;
 }
 #title-area{
@@ -166,7 +166,7 @@ div.container.form{
 body,html{
         font-size: 30px;
 }
-    
+
 #mind-reader-logo{
     width:60%;
     float:left;
@@ -175,7 +175,7 @@ body,html{
         padding-bottom: 30px;
 /*        background: red;*/
     }
-    #button{
+    #submit-btn{
         width:40%;
         margin-left: 55%;
     }
@@ -192,20 +192,20 @@ body,html{
         margin-bottom: 30px;
         display: flex;
         flex-direction: row;
-        
+
     }
-    
+
     .col-md-4{
         float: left;
         width:33%;
         text-align: center;
     }
-    
+
     .topic:hover{
        opacity: 0.5;
     }
-    
-    
+
+
     .hover-text{
         display: flex;
         color: #fff;
@@ -215,13 +215,13 @@ body,html{
         z-index: 1;
         bottom: 90px;
         left:18%;
-       
+
     }
     .topic{
-       
+
         width:80%;
     }
-    
+
 }
 
 @media (min-width: 940px){
@@ -243,40 +243,40 @@ div.container.form{
     margin-left: 15%;
     margin-right: 15%;
     width:70%;
-}  
+}
     #options-checkboxes{
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     }
-    
+
     #title-area{
     padding: 0;
     }
-    
+
     ul{
         padding-left: 0;
     }
-    
+
     #scroll-area.clearfix{
         height:80px;
         overflow-y:scroll;
     }
     .checkbox-row{
     display: flex;
-     flex-direction: column; 
+     flex-direction: column;
      justify-content: space-between;
      float:left;
      margin-right: 20px;
     }
-    
-    #button{
+
+    #submit-btn{
         display: flex;
         align-self: flex-end;
         justify-content: center;
         width:40%;
         margin-top: 20px;
         margin-left: 50%;
-        
+
     }
- 
+
 }

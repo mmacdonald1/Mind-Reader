@@ -1,17 +1,21 @@
-function fetchAndDisplay(url,display) {
+function fetchAndDisplay(url, display) {
   $.getJSON(url, function(response) {
     var searchedFor = response.query
     var numberOfResults = response.numItems
     var products = response.items;
+    var resultHeader = `<h3> ${numberOfResults} results found for ${searchedFor} </h3>`;
+    console.log(display);
+    var resultMessage = !display ? resultHeader : '';
+    console.log(resultMessage);
     var displayIn = display || '#results';
     $(displayIn).empty();
     $('.tab-contents').empty();
-    $(displayIn).append(`<h3> ${numberOfResults} results found for ${searchedFor} </h3>`);
+    $(displayIn).append(resultMessage);
     products.forEach(function(product) {
       var productHTML = '';
       var productId = product.itemId;
       var productName = product.name;
-      var productPrice = product.salePrice;
+      var productPrice = product.salePrice || "0.00";
       var productImage = product.mediumImage;
       var productRatingImage = product.customerRatingImage || 'not rated';
 
@@ -56,11 +60,13 @@ function makeTabs(categories) {
       </div> `;
     $('#results').empty();
     $('#nav-tabContent').html(tabContent);
-    var requestUrl = `http://localhost:3000/api/getproducts?query=&catId=${catID}`;
+    // var words = ["men", "baby", "women", "dad", "play"];
+    var words = ["a", "e", "i", "o", "u"];
+    var randomQuery = words[Math.floor(Math.random() * words.length)];
+
+    var requestUrl = `http://localhost:3000/api/getproducts?query=${randomQuery}&catId=${catID}`;
 
     fetchAndDisplay(requestUrl, `#nav-${catID}`);
-    console.log('Working');
-    console.log(e)
 });
   }
 
@@ -79,9 +85,6 @@ if(urlQueryString) {
       };
   });
 }
-console.log(allCategories);
-
-
 
 $(document).ready(function() {
 

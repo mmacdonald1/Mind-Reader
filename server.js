@@ -52,8 +52,6 @@ app.get('/api/getproducts', (request, res) => {
     }
   });
 
-  // return makeRequest.get('')
-  // return response.json(req.body)
 });
 
 app.get('/api/categories', function(req, res) {
@@ -77,8 +75,6 @@ app.get('/api/categories', function(req, res) {
     }
   });
 });
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'))
 });
