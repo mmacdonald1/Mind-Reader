@@ -195,7 +195,7 @@ label.btn.btn-primary.active.focus{
     box-shadow: none;
 }
 
-h1{
+.instructions{
     text-align: center;
     color: #0f394c;
 }
