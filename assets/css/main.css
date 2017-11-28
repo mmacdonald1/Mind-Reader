@@ -358,14 +358,14 @@ div.container.form{
     .sign-up__success {
   position: absolute;
   left: calc(50% - 50px);
-  top: calc(50% - 50px);
+  top: calc(27% - 50px);
   margin: auto;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #e0dc06;
+  background-color: #f2a937;
   text-align: center;
-  color: green;
+  color: white;
   font-size: 50px;
   font-weight: bold;
   line-height: 100px;
@@ -377,8 +377,8 @@ div.container.form{
   left: calc(50% - 60px);
   top: calc(50% - 60px);
   margin: auto;
-  border: 16px solid #ae8ace; /* light purple */
-  border-top: 16px solid #e0dc06; /* yellow */
+  border: 16px solid #79b0b9; /* light purple */
+  border-top: 16px solid #f4b956; /* yellow */
   border-radius: 50%;
   width: 120px;
   height: 120px;
