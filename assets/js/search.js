@@ -103,7 +103,7 @@ $(document).ready(function() {
     if($('#query').val() != '') {
       var searchTerm = $('#query').val();
       // $('#results').empty();
-      var url = `http://localhost:3000/api/getproducts?query=${searchTerm}`;
+      var url = `https://localhost:3000/api/getproducts?query=${searchTerm}`;
         fetchAndDisplay(url);
 
     } else {
