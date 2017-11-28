@@ -38,9 +38,9 @@ app.get('/api/getproducts', (request, res) => {
   const query = request.query.query || 'ipod';
   let requestUrl;
   if(request.query.catId) {
-    requestUrl = `http://api.walmartlabs.com/v1/search?query=${query}&categoryId=${request.query.catId}&format=json&apiKey=${walmartKey}`;
+    requestUrl = `https://api.walmartlabs.com/v1/search?query=${query}&categoryId=${request.query.catId}&format=json&apiKey=${walmartKey}`;
   } else {
-    requestUrl = `http://api.walmartlabs.com/v1/search?query=${query}&format=json&apiKey=${walmartKey}`;
+    requestUrl = `https://api.walmartlabs.com/v1/search?query=${query}&format=json&apiKey=${walmartKey}`;
   }
   console.log(requestUrl);
   const options = {
@@ -70,7 +70,7 @@ app.get('/api/getproducts', (request, res) => {
 });
 
 app.get('/api/categories', function(req, res) {
-  const requestUrl = 'http://api.walmartlabs.com/v1/taxonomy?apiKey=' + walmartKey;
+  const requestUrl = 'https://api.walmartlabs.com/v1/taxonomy?apiKey=' + walmartKey;
   const options = {
     url: requestUrl
   };
