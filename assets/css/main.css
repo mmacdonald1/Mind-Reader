@@ -177,9 +177,6 @@ margin-left:10%;
 margin-right: 10%;
 margin-top: 30px;
 }
-btn.btn-primary{
-    padding-bottom: 0;
-}
 
 .btn-group{
     display: flex;
