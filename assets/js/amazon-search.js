@@ -19,13 +19,13 @@ $(document).ready(function() {
                 }
                 productHtml += `
                     <div class="amazon-product">
-                        <p> Name: ${itemName} </p>
                         <img id="img-${itemId}" src="">
+                        <p> Name: ${itemName} </p>
                         <p> Price: ${itemPrice} </p> 
                     </div>
                 `;
                 
-                $('#amazon-result').append(productHtml);
+                $('#results').append(productHtml);
                 $(`#img-${itemId}`).attr('src', itemImage);
             });
         });
