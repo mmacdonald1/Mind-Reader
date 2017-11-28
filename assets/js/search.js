@@ -3,14 +3,14 @@ function fetchAndDisplay(url, display) {
     var searchedFor = response.query
     var numberOfResults = response.numItems
     var products = response.items;
-    var resultHeader = `<h3> ${numberOfResults} results found for ${searchedFor} </h3>`;
+//    var resultHeader = `<h3> ${numberOfResults} results found for ${searchedFor} </h3>`;
     console.log(display);
-    var resultMessage = !display ? resultHeader : '';
-    console.log(resultMessage);
+//    var resultMessage = !display ? resultHeader : '';
+//    console.log(resultMessage);
     var displayIn = display || '#results';
     $(displayIn).empty();
     $('.tab-contents').empty();
-    $(displayIn).append(resultMessage);
+//    $(displayIn).append(resultMessage);
     products.forEach(function(product) {
       var productHTML = '';
       var productId = product.itemId;

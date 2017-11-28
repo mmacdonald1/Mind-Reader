@@ -2,6 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var makeRequest = require('request');
+//var velocityUiPack = require("velocity-ui-pack");
 var key = require('./keys').key;
 
 //Express-specific
@@ -12,11 +13,11 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static('assets')); //serve the static portions of the site (JS and CSS)
+app.use(express.static(path.join(__dirname, '/assets'))); //serve the static portions of the site (JS and CSS)
 
 // // routers - passed the app object
 // require('./assets/routes/apiRoutes.js');
-// require('./assets/routes/htmlRoutes.js');
+ require('./assets/routes/htmlRoutes.js')(app);
 
 
 app.get('/api/getproducts', (request, res) => {
@@ -75,13 +76,7 @@ app.get('/api/categories', function(req, res) {
     }
   });
 });
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'))
-});
 
-app.get('/searchs', function(req, res) {
-  res.sendFile(path.join(__dirname + '/search.html'))
-});
 
 
 //listening notification
