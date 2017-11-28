@@ -233,7 +233,7 @@ body,html{
     width:20%;
 }
 .jumbotron.clearfix{
-    background-image: url(../img/gifts.jpg);
+    background-image: url(../img/swirl_pattern.png);
     background-size:contain;
 }
 div.container.form{
@@ -243,19 +243,26 @@ div.container.form{
     margin-left: 15%;
     margin-right: 15%;
     width:70%;
+    
 }
-    #options-checkboxes{
-    display: flex;
-    flex-direction: column;
-    }
 
     #title-area{
     padding: 0;
     }
 
     ul{
-        padding-left: 0;
-    }
+       -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+    -webkit-column-rule: 4px outset #4d98a2; /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px outset #4d98a2; /* Firefox */
+    column-rule: 4px outset #4d98a2;
+        }
 
     #scroll-area.clearfix{
         height:80px;
