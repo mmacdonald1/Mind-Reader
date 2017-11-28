@@ -18,21 +18,22 @@ function fetchAndDisplay(url, display) {
       var productPrice = product.salePrice || "0.00";
       var productImage = product.mediumImage;
       var productRatingImage = product.customerRatingImage || 'not rated';
-
+//<img class="rating-image" id="rimg-${productId}" src=''>
       productHTML += `
-        <div class="product" style="float:left;">
+        <div class="product well-md" style="float:left;">
         <img id='img-${productId}' scr=''>
-        <p> ${productName} </p>
-        <p> Price: <strong> $${productPrice} </strong> </p>
-        <img class="rating-image" id="rimg-${productId}" src=''>
+        <div class="product-info">
+        <h5> ${productName} </h5>
+        </div>
+        <h6> Price: $${productPrice} </h6>
         </div>
       `;
       $(displayIn).append(productHTML);
 
       $(`#img-${productId}`).attr("src", productImage);
       $(`#rimg-${productId}`).attr("src", productRatingImage);
-      $(`#img-${productId}`).attr("width", '200px');
-      $(`#img-${productId}`).attr("height", '200px');
+      $(`#img-${productId}`).attr("width", '150px');
+      $(`#img-${productId}`).attr("height", '150px');
     });
   });
 }

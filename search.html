@@ -20,18 +20,29 @@
 </head>
 <body>
 <nav class="navbar clearfix">
-  <a class="navbar-brand" href="#">
+   <a href="/">
     <img id="mind-reader-logo" src="img/mind-reader-logo.png"  alt="Mind Reader">
-  </a>
+    </a>
 </nav>
 <!-- ==================================================================================== -->
 <div id="accordion" role="tablist">
   <div class="card">
     <div class="card-header" role="tab" id="headingOne">
+     <h1>Select a Store and a Topic to begin.</h1>
       <h5 class="mb-0">
+<!--
         <a class="collapsed " data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <img src="http://www.freeiconspng.com/uploads/walmart-logo-png-25.png" alt="Walmart">
         </a>
+-->
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> Walmart
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="option2" autocomplete="off"> Amazon
+          </label>
+        </div>
       </h5>
     </div>
   <nav class="nav nav-tabs" id="myTab" role="tablist">
@@ -69,7 +80,6 @@
         </div>
         <div class="row">
           <div id="results" style="margin-left:40px;">
-            Result Goes here
           </div>
         </div>
       </div>
