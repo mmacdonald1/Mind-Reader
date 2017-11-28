@@ -3,8 +3,22 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var makeRequest = require('request');
 //var velocityUiPack = require("velocity-ui-pack");
-var key = require('./keys').key;
+var secretKeys = require('./keys');
+var walmartKey = secretKeys.walmartKey;
+var awsId = secretKeys.awsId;
+var awsSecret = secretKeys.awsSecret;
+var assocId = secretKeys.assocId;
+var locale = 'US';
 
+
+var {OperationHelper} = require('apac');
+
+var opHelper= new OperationHelper({
+    awsId,
+    awsSecret,
+    assocId,
+    locale,
+});
 //Express-specific
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -24,9 +38,9 @@ app.get('/api/getproducts', (request, res) => {
   const query = request.query.query || 'ipod';
   let requestUrl;
   if(request.query.catId) {
-    requestUrl = `http://api.walmartlabs.com/v1/search?query=${query}&categoryId=${request.query.catId}&format=json&apiKey=${key}`;
+    requestUrl = `http://api.walmartlabs.com/v1/search?query=${query}&categoryId=${request.query.catId}&format=json&apiKey=${walmartKey}`;
   } else {
-    requestUrl = `http://api.walmartlabs.com/v1/search?query=${query}&format=json&apiKey=${key}`;
+    requestUrl = `http://api.walmartlabs.com/v1/search?query=${query}&format=json&apiKey=${walmartKey}`;
   }
   console.log(requestUrl);
   const options = {
@@ -56,7 +70,7 @@ app.get('/api/getproducts', (request, res) => {
 });
 
 app.get('/api/categories', function(req, res) {
-  const requestUrl = 'http://api.walmartlabs.com/v1/taxonomy?apiKey=' + key;
+  const requestUrl = 'http://api.walmartlabs.com/v1/taxonomy?apiKey=' + walmartKey;
   const options = {
     url: requestUrl
   };
@@ -77,7 +91,25 @@ app.get('/api/categories', function(req, res) {
   });
 });
 
+app.get('/test', (rq, rs) => rs.send('Works'))
 
+app.get('/api/products/amazon', function(req, res) {
+  var query = req.query.query || 'ipad';
+  var cat = req.query.cat;
+  return opHelper.execute('ItemSearch', {
+    'SearchIndex': 'All',
+    'Keywords': query,
+    'ResponseGroup': 'ItemAttributes, Offers, Images'
+  }).then(function(response) {
+    console.log('Getting Response');
+    return res.status(200).json(response.result.ItemSearchResponse.Items.Item)    
+    // return res.status(200).json(response.result.ItemSearchResponse.items)
+  }).catch(function(error) {
+    return res.status(400).json({
+      message: "Something bad happened"
+    })
+  })
+});
 
 //listening notification
 app.listen(PORT, function() {

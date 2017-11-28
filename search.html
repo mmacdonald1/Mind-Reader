@@ -85,49 +85,35 @@
       </div>
     </div>
   </div>
-  <!-- <div class="card">
-    <div class="card-header" role="tab" id="headingTwo">
-      <h5 class="mb-0">
-        <a class="collapsed " data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-    <img src="https://cdn4.iconfinder.com/data/icons/simple-peyment-methods/512/ebay-128.png" alt="ebay">
-        </a>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3 mt-5 mb-5">
-            <div class="input-group">
-              <div class="input-group-btn">
-                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Clothing, Shoes & jewelery</a>
-                  <a class="dropdown-item" href="#">Electronics</a>
-                  <a class="dropdown-item" href="#">Arts & Crafts</a>
-                  <a class="dropdown-item" href="#">Gift Cards</a>
-                  <a class="dropdown-item" href="#">Toys& Games</a>
-                  <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </div>
-              <input name="query" id="query" type="text" class="form-control" placeholder="Product name" aria-label="Product name">
-              <span class="input-group-btn">
-                <button id="submitbtn" class="btn btn-secondary" type="button">Search</button>
-              </span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div> -->
-
+  
 <!-- =================================================================================== -->
+  <p>
+      <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Amazon
+      </a>
+      <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Button with data-target
+      </button> -->
+    </p>
+    <div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <div class="container main">
+      <div class="row">
+        <h1> Search Amazon </h1>
+        <input name="query" id="query-amz" type="text" class="form-control" placeholder="Product name" aria-label="Product name">
+        <span class="input-group-btn">
+          <button id="submitbtn-amz" class="btn btn-secondary" type="button">Search</button>
+        </span>
+      </div>
+    <div class="amazon-result" id="amazon-result">
+    </div>  </div>
+</div>
+  </div>
+<!--
 <div class="main">
 
 </div>
+-->
 
 </body>
 <!-- ================================================================================================================================================= -->
@@ -137,6 +123,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="js/search.js"></script>
+    <script src="js/amazon-search.js"></script>
 
 <!-- ================================================================================= -->
 </html>
