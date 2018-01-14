@@ -1,19 +1,19 @@
+require('dotenv').config()
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var makeRequest = require('request');
-//var velocityUiPack = require("velocity-ui-pack");
-var secretKeys = require('./keys');
-var walmartKey = secretKeys.walmartKey;
-var awsId = secretKeys.awsId;
-var awsSecret = secretKeys.awsSecret;
-var assocId = secretKeys.assocId;
+// var velocityUiPack = require("velocity-ui-pack");
+var walmartKey = process.env.WALMART_KEY;
+var awsId = process.env.AWS_ID;
+var awsSecret = process.env.AWS_SECRET;
+var assocId = process.env.ASSOC_ID;
 var locale = 'US';
 
 
-var {OperationHelper} = require('apac');
+var { OperationHelper } = require('apac');
 
-var opHelper= new OperationHelper({
+var opHelper = new OperationHelper({
     awsId,
     awsSecret,
     assocId,
@@ -62,7 +62,7 @@ app.get('/api/getproducts', (request, res) => {
     } else {
       return res.status(500).json({
         success: false,
-        message: 'Unable to get product :('
+        message: 'Unable to get product  '
       });
     }
   });
@@ -77,6 +77,7 @@ app.get('/api/categories', function(req, res) {
 
   return makeRequest.get(options, function(error, response, body) {
     if(!error) {
+      console.log('body ....', body)
       const responseBody = JSON.parse(body);
       const categories = responseBody.categories.map(function(category) {
         return {
@@ -113,5 +114,5 @@ app.get('/api/products/amazon', function(req, res) {
 
 //listening notification
 app.listen(PORT, function() {
-    console.log('App listening on http://localhost:' + PORT);
+    console.log('App listening on http://localhost' + PORT);
 });
