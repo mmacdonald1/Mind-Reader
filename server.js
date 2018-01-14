@@ -19,7 +19,7 @@ var opHelper= new OperationHelper({
     assocId,
     locale,
 });
-//Express-specific
+//Express-specific  adding text here for new push
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -102,7 +102,7 @@ app.get('/api/products/amazon', function(req, res) {
     'ResponseGroup': 'ItemAttributes, Offers, Images'
   }).then(function(response) {
     console.log('Getting Response');
-    return res.status(200).json(response.result.ItemSearchResponse.Items.Item)    
+    return res.status(200).json(response.result.ItemSearchResponse.Items.Item)
     // return res.status(200).json(response.result.ItemSearchResponse.items)
   }).catch(function(error) {
     return res.status(400).json({
