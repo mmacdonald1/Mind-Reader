@@ -3,11 +3,13 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var makeRequest = require('request');
+var keys = require('./.env.json');
+console.log(keys);
 // var velocityUiPack = require("velocity-ui-pack");
-var walmartKey = process.env.WALMART_KEY;
-var awsId = process.env.AWS_ID;
-var awsSecret = process.env.AWS_SECRET;
-var assocId = process.env.ASSOC_ID;
+var walmartKey = keys.WALMART_KEY || process.env.WALMART_KEY;
+var awsId = keys.AWS_ID || process.env.AWS_ID;
+var awsSecret = keys.AWS_SECRET || process.env.AWS_SECRET;
+var assocId = keys.ASSOC_ID || process.env.ASSOC_ID;
 var locale = 'US';
 
 var { OperationHelper } = require('apac');
