@@ -10,7 +10,6 @@ var awsSecret = process.env.AWS_SECRET;
 var assocId = process.env.ASSOC_ID;
 var locale = 'US';
 
-
 var { OperationHelper } = require('apac');
 
 var opHelper = new OperationHelper({
