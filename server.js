@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, '/assets'))); //serve the static por
 
 // // routers - passed the app object
 // require('./assets/routes/apiRoutes.js');
- require('./assets/routes/htmlRoutes.js')(app);
+app.use(require('./assets/routes/htmlRoutes.js'));
 
 
 app.get('/api/getproducts', (request, res) => {
