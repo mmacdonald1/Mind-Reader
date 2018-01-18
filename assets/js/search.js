@@ -103,7 +103,7 @@ $(document).ready(function() {
     if($('#query').val() != '') {
       var searchTerm = $('#query').val();
       // $('#results').empty();
-      var url = `https://powerful-reaches-63695.herokuapp.com/api/getproducts?query=${searchTerm}`;
+      var url = `https://shielded-temple-36828.herokuapp.com/api/getproducts?query=${searchTerm}`;
         fetchAndDisplay(url);
 
     } else {

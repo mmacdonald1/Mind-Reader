@@ -31,7 +31,13 @@ app.use(express.static(path.join(__dirname, '/assets'))); //serve the static por
 
 // // routers - passed the app object
 // require('./assets/routes/apiRoutes.js');
-app.use(require('./assets/routes/htmlRoutes.js'));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + '/index.html'))
+});
+
+app.get('/searchs', function(req, res) {
+  res.sendFile(path.join(__dirname + '/search.html'))
+});
 
 
 app.get('/api/getproducts', (request, res) => {
@@ -114,6 +120,5 @@ app.get('/api/products/amazon', function(req, res) {
 
 //listening notification
 app.listen(PORT, function() {
-  console.log(walmartKey)
     console.log('App listening on http://localhost' + PORT);
 });
