@@ -114,5 +114,6 @@ app.get('/api/products/amazon', function(req, res) {
 
 //listening notification
 app.listen(PORT, function() {
+  console.log(walmartKey)
     console.log('App listening on http://localhost' + PORT);
 });
