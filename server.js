@@ -3,13 +3,13 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var makeRequest = require('request');
-// var keys = require('./.env.json')
 // var velocityUiPack = require("velocity-ui-pack");
 var walmartKey = process.env.WALMART_KEY;
 var awsId = process.env.AWS_ID;
 var awsSecret = process.env.AWS_SECRET;
 var assocId = process.env.ASSOC_ID;
 var locale = 'US';
+
 
 var { OperationHelper } = require('apac');
 
@@ -31,13 +31,7 @@ app.use(express.static(path.join(__dirname, '/assets'))); //serve the static por
 
 // // routers - passed the app object
 // require('./assets/routes/apiRoutes.js');
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'))
-});
-
-app.get('/searchs', function(req, res) {
-  res.sendFile(path.join(__dirname + '/search.html'))
-});
+ require('./assets/routes/htmlRoutes.js')(app);
 
 
 app.get('/api/getproducts', (request, res) => {
