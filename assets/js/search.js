@@ -43,7 +43,7 @@ function makeTabs(categories) {
     var tabId = category.id;
     var tabName = category.name;
     var searchTerm = 'a';
-    var requestUrl = `https://powerful-reaches-63695.herokuapp.com/api/getproducts?query=${searchTerm}&catId=${tabId}`;
+    var requestUrl = `api/getproducts?query=${searchTerm}&catId=${tabId}`;
     var tabNav = `
       <a class="nav-item nav-link" id="nav-${tabId}-tab" data-catid="${tabId}" data-toggle="tab" href="#nav-${tabId}" role="tab" aria-controls="nav-${tabId}" aria-selected="false">
         ${tabName}
@@ -65,7 +65,7 @@ function makeTabs(categories) {
     var words = ["a", "e", "i", "o", "u"];
     var randomQuery = words[Math.floor(Math.random() * words.length)];
 
-    var requestUrl = `https://powerful-reaches-63695.herokuapp.com/api/getproducts?query=${randomQuery}&catId=${catID}`;
+    var requestUrl = `api/getproducts?query=${randomQuery}&catId=${catID}`;
 
     fetchAndDisplay(requestUrl, `#nav-${catID}`);
 });
@@ -103,7 +103,7 @@ $(document).ready(function() {
     if($('#query').val() != '') {
       var searchTerm = $('#query').val();
       // $('#results').empty();
-      var url = `https://powerful-reaches-63695.herokuapp.com/api/getproducts?query=${searchTerm}`;
+      var url = `http://localhost:3000/api/getproducts?query=${searchTerm}`;
         fetchAndDisplay(url);
 
     } else {
