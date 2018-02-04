@@ -1,6 +1,6 @@
 # Mind Reader
 
-A user friendly website that allows you to shop multiple categories of products at multiple stores on one page.
+A shopping website that allows you to shop multiple categories of products at multiple stores on one page.
 
 ## Live Demo
 
