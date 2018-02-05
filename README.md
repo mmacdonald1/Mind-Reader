@@ -15,6 +15,7 @@ https://mindreaders.herokuapp.com
 * jQuery
 * JavaScript
 * Bootstrap
+* Velocity.js
 
 ## Documentation of API
 * GET /api/categories
