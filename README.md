@@ -24,13 +24,17 @@ https://mindreaders.herokuapp.com
   - Queries the Walmart API for products based on the selected categories or from a a specific search term
 * GET /api/products/amazon
   - Queries the Amazon API for products based on a search term
-  
+
 ## Walkthrough
-User can select categories that they would like to search stores for. 
+User can select categories that they would like to search stores for.
 ![Home](https://github.com/mmacdonald1/Mind-Reader/blob/master/assets/img/home.png)
 
-User can search Walmart more specifically by typing in the search bar or they can click the tabs to see Walmart products from those categories. 
+User can search Walmart more specifically by typing in the search bar or they can click the tabs to see Walmart products from those categories.
 ![Walmart](https://github.com/mmacdonald1/Mind-Reader/blob/master/assets/img/walmart.png)
 
 To search Amazon click the Amazon button to render the Amazon search bar. Search for a product and the associated product results will render.
 ![Amazon](https://github.com/mmacdonald1/Mind-Reader/blob/master/assets/img/amazon.png)
+
+## Contributors
+- [Melanie MacDonald - github.com/mmacdonald1](https://github.com/mmacdonald1)
+- [Fitsum  Belayneh - github.com/fitbez](https://github.com/fitbez)
