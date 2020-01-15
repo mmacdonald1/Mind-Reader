@@ -1,4 +1,4 @@
-//Displaying Walmart Search Bar
+//Displaying Walmart and Amazon Search Bar
 const walmartButton = document.querySelector("#walmart-button");
 const walmartInput = document.querySelector("#walmart-input");
 const amazonButton = document.querySelector("#amazon-button");
