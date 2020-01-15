@@ -1,104 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Mind Reader</title>
 
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-     integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-     <!-- Added a link to CSS-->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Added a link to CSS-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- Added a link to Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400,900|Montserrat:400,600,700" rel="stylesheet">
-
-</head>
-<body>
-<nav class="navbar clearfix">
-   <a href="/">
-    <img id="mind-reader-logo" src="img/mind-reader-logo.png"  alt="Mind Reader">
-    </a>
-</nav>
-<!-- ==================================================================================== -->
-<div id="accordion" role="tablist">
-  <div class="card">
-    <div class="card-header" role="tab" id="headingOne">
-     <h1 class="instructions">Select a Store and a Topic to begin.</h1>
-      <h5 class="mb-0">
-<!--
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400,900|Montserrat:400,600,700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar clearfix">
+      <a href="/">
+        <img
+          id="mind-reader-logo"
+          src="img/mind-reader-logo.png"
+          alt="Mind Reader"
+        />
+      </a>
+    </nav>
+    <!-- ==================================================================================== -->
+    <div id="accordion" role="tablist">
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h1 class="instructions">Select a Store and a Topic to begin.</h1>
+          <h5 class="mb-0">
+            <!--
         <a class="collapsed " data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <img src="http://www.freeiconspng.com/uploads/walmart-logo-png-25.png" alt="Walmart">
         </a>
 -->
-        <div class="btn-group" data-toggle="buttons">
-<!--
+            <div class="btn-group" data-toggle="buttons">
+              <!--
           <label class="btn btn-primary active">
             <input type="radio" name="options" id="option1" autocomplete="off" checked> Walmart
           </label>
 -->
-        <a class="btn btn-primary active" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Walmart
-      </a>
-<!--
+              <a
+                class="btn btn-primary active"
+                data-toggle="collapse"
+                href="#walmart-input"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                id="walmart-button"
+              >
+                Walmart
+              </a>
+              <!--
           <label class="btn btn-primary">
             <input type="radio" name="options" id="option2"  autocomplete="off"> Amazon
           </label>
 -->
-         <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Amazon
-      </a>
+              <a
+                class="btn btn-primary"
+                data-toggle="collapse"
+                href="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+                id="amazon-button"
+              >
+                Amazon
+              </a>
+            </div>
+          </h5>
         </div>
-      </h5>
-    </div>
-  <nav class="nav nav-tabs" id="myTab" role="tablist">
-
-  </nav>
-<div class="tab-content" id="nav-tabContent">
-
-</div>
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-lg-6 offset-lg-3 mt-5 mb-5">
-            <div class="input-group">
-              <div class="input-group-btn">
-                <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Clothing, Shoes & jewelery</a>
-                  <a class="dropdown-item" href="#">Electronics</a>
-                  <a class="dropdown-item" href="#">Arts & Crafts</a>
-                  <a class="dropdown-item" href="#">Gift Cards</a>
-                  <a class="dropdown-item" href="#">Toys& Games</a>
-                  <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </div>
-              <input name="query" id="query" type="text" class="form-control" placeholder="Product name" aria-label="Product name">
-              <span class="input-group-btn">
-                <button id="submitbtn" class="btn btn-secondary" type="button">Search</button>
+        <div class="collapse" id="walmart-input">
+          <div class="card card-body">
+            <div class="container main">
+              <div class="row">
+                <h1>Search On Walmart</h1>
+                <input
+                  name="query"
+                  id="query"
+                  type="text"
+                  class="form-control"
+                  placeholder="Product name"
+                  aria-label="Product name"
+                />
+                <span class="input-group-btn">
+                  <button
+                    id="submitbtn"
+                    class="btn btn-secondary"
+                    type="button"
+                  >
+                    Search
+                  </button>
                 </span>
-                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div id="results" style="margin-left:40px;">
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <div class="container main">
+              <div class="row">
+                <h1>Search On Amazon</h1>
+                <input
+                  name="query"
+                  id="query-amz"
+                  type="text"
+                  class="form-control"
+                  placeholder="Product name"
+                  aria-label="Product name"
+                />
+                <span class="input-group-btn">
+                  <button
+                    id="submitbtn-amz"
+                    class="btn btn-secondary"
+                    type="button"
+                  >
+                    Search
+                  </button>
+                </span>
+              </div>
+              <div class="amazon-result" id="amazon-result"></div>
+            </div>
+          </div>
+        </div>
+        <nav class="nav nav-tabs" id="myTab" role="tablist"></nav>
+        <div class="tab-content" id="nav-tabContent"></div>
+        <div
+          id="collapseOne"
+          class="collapse show"
+          role="tabpanel"
+          aria-labelledby="headingOne"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3 mt-5 mb-5"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="results" style="margin-left:40px;"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-<!-- =================================================================================== -->
-  <p>
-<!--
+    <!-- =================================================================================== -->
+    <p>
+      <!--
       <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       Amazon
       </a>
@@ -107,35 +166,33 @@
         Button with data-target
       </button> -->
     </p>
-    <div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    <div class="container main">
-      <div class="row">
-        <h1> Search Amazon </h1>
-        <input name="query" id="query-amz" type="text" class="form-control" placeholder="Product name" aria-label="Product name">
-        <span class="input-group-btn">
-          <button id="submitbtn-amz" class="btn btn-secondary" type="button">Search</button>
-        </span>
-      </div>
-    <div class="amazon-result" id="amazon-result">
-    </div>  </div>
-</div>
-  </div>
-<!--
+
+    <!--
 <div class="main">
 
 </div>
 -->
+  </body>
+  <!-- ================================================================================================================================================= -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/search.js"></script>
+  <script src="js/amazon-search.js"></script>
 
-</body>
-<!-- ================================================================================================================================================= -->
-<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="js/search.js"></script>
-    <script src="js/amazon-search.js"></script>
-
-<!-- ================================================================================= -->
+  <!-- ================================================================================= -->
 </html>
