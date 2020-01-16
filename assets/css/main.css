@@ -50,6 +50,7 @@ html {
   background-color: #eeeeee;
   color: #222222;
   font-size: 30px;
+  outline: none;
 }
 p {
   font-size: 1em;
@@ -65,10 +66,20 @@ h4 {
   font-weight: 600;
 }
 h1 {
+  margin: 0;
   font-size: 1.4em;
 }
 h2 {
   font-size: 1em;
+}
+.form-control:focus {
+  border-color: none;
+  box-shadow: none;
+}
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
 }
 #submit-btn {
   background-color: #82c6b4;
@@ -217,6 +228,11 @@ label.btn.btn-primary:active:focus {
 
 #collapseExample {
   display: none;
+}
+
+.input-group {
+  width: 50%;
+  margin: 0 50px 0 50px;
 }
 /*
  * Clearfix: contain floats
